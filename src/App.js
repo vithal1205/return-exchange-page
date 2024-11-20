@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from "react";
+import { Container, Box } from "@mui/material";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ReturnExchangePage from "./pages/ReturnExchangePage";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <Header />
+      <Container sx={{ my: 4 }}>
+        <ReturnExchangePage />
+      </Container>
+      <Footer />
+    </Box>
   );
-}
+};
 
 export default App;
